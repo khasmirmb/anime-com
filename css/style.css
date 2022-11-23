@@ -224,11 +224,69 @@ body{
     background-color: aquamarine;
 }
 .home-sidebar{
-    height: 100vh;
+    height: 70vh;
     width: 30%;
     background: #1f1f1f;
     float: right;
     display: inline-block;
     margin: 20px 30px 20px 20px;
     border-radius: 10px;
+}
+.voting-links{
+    width: auto;
+    height: 50px;
+    border-radius: 5px;
+    background-color: aquamarine;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 10px;
+}
+.voting-links span{
+    font-size: 25px;
+    display: inline-block;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+.vote-links{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+}
+.vote1{
+    background-color: #000000;
+}
+.vote-links li a{
+    height: auto;
+    width: auto;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    margin: 15px;
+}
+.vote-links li{
+    position: relative;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    text-align: center;
+}
+.vote-links li iconify-icon{
+    width: 50px;
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    display: flex;
+    margin: 5px;
+}
+.vote-links .links-name{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.vote-links p{
+    position: relative;
+    color: white;
+    display: flex;
+    padding: 20px;
 }
