@@ -9,7 +9,7 @@
         header('location: admin/dashboard.php');
     }
     else if (isset($_SESSION['user_type']) == 'user'){
-        header('location: faculty/faculty.php');
+        header('location: user/login.php');
     }
     else{
         header('location: homepage/homepage.php');
