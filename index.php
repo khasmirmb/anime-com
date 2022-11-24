@@ -6,7 +6,7 @@
 
     //check if user is login already otherwise send to login page
     if (isset($_SESSION['user_type']) == 'admin'){
-        header('location: admin/dashboard.php');
+        header('location: user/adminpage.php');
     }
     else if (isset($_SESSION['user_type']) == 'user'){
         header('location: user/login.php');

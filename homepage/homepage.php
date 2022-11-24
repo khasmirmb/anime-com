@@ -15,7 +15,7 @@
             $_SESSION['fullname'] = $res['firstname'].' '.$res['lastname'];
             $_SESSION['user_type'] = $res['type'];
             if($res['type'] == 'admin'){
-                header('location: ../admin/dashboard.php');
+                header('location: ../user/adminpage.php');
             }else{
                 header('location: ../user/userpage.php');
             }
