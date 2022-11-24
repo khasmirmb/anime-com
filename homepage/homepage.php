@@ -39,99 +39,13 @@
             <button type="button" id="login-show">Login</button>
             <button type="button" id="#">SignUp</button>
     </div>
-        <section class="section">
-            <div class="slider">
-                <div class="slide">
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
 
-                    <div class="st first">
-                            <img src="../images/img1.jpg" alt="img" width="850" height="400">
-                    </div>
+    <?php
 
-                    <div class="st">
-                        <img src="../images/img2.jpg" alt="img" width="850" height="400">
-                    </div>
+    require_once '../includes/slider.php';
+    require_once '../includes/home-sidebar.php';
 
-                    <div class="st">
-                        <img src="../images/img3.jpg" alt="img" width="850" height="400">
-                    </div>
-
-                    <div class="st">
-                        <img src="../images/img4.jpg" alt="img" width="850" height="400">
-                    </div>
-
-                    <div class="nav-auto">
-                        <div class="a-b1"></div>
-                        <div class="a-b2"></div>
-                        <div class="a-b3"></div>
-                        <div class="a-b4"></div>
-                    </div>
-                </div>
-                <div class="nav-m">
-                    <label for="radio1" class="m-btn"></label>
-                    <label for="radio2" class="m-btn"></label>
-                    <label for="radio3" class="m-btn"></label>
-                    <label for="radio4" class="m-btn"></label>
-                </div>
-            </div>
-        </section>
-
-        <script type="text/javascript">
-            var counter=1;
-            setInterval(function(){
-                document.getElementById('radio' + counter).checked=true;
-                counter++;
-                if(counter > 4){
-                    counter = 1;
-                }
-            },5000);
-        </script>
-    <div class="home-sidebar">
-        <div class="voting-links">
-            <iconify-icon icon="fluent:vote-24-regular"></iconify-icon>
-            <span class="vote-name">Voting Links</span>
-        </div>
-        <ul class="vote-links">
-        <li class="vote1">
-            <a href="#" class="">
-                <iconify-icon icon="icon-park-outline:ranking"></iconify-icon>
-                <span class="links-name">Top Anime Polls</span>
-                <p>Result Every Sunday</p>
-            </a>
-        </li>
-        <li class="vote">
-            <a href="#" class="">
-                <iconify-icon icon="mdi:face-male"></iconify-icon>
-                <span class="links-name">Male Character Polls</span>
-                <p>Result Every Sunday</p>
-            </a>
-        </li>
-        <li class="vote1">
-            <a href="#" class="">
-                <iconify-icon icon="mdi:face-female"></iconify-icon>
-                <span class="links-name">Female Character Polls</span>
-                <p>Result Every Sunday</p>
-            </a>
-        </li>
-        <li class="vote">
-            <a href="#" class="">
-                <iconify-icon icon="mdi:cards-heart"></iconify-icon>
-                <span class="links-name">Couple-Ship Polls</span>
-                <p>Result Every Sunday</p>
-            </a>
-        </li>
-        <li class="vote1">
-            <a href="#" class="">
-                <iconify-icon icon="icon-park-outline:ranking"></iconify-icon>
-                <span class="links-name">Pre-Release Anime Polls</span>
-                <p>Result Every Sunday</p>
-            </a>
-        </li>
-        </ul>
-    </div>
+    ?>
 
     <div id="login-modal">
         <div class="modal">
@@ -168,64 +82,12 @@
         });
     </script>
 
-<div class="charts-leader">
-            <hr>
-            <h2>Chart Leaders</h2>
-            <hr>
-            <div class="box">
-                <div class="heading">
-                    <h3>Male Characters</h3>
-                </div>
-                <img src="https://cdn.myanimelist.net/images/characters/6/343344.jpg" alt="">
-                <div class="description">
-                    <h4>Shigeo Kageyama / Mob</h4>
-                    <p>Week 5 - Fall</p>
-                    <br>
-                    <h4>Mob Pyscho III</h4>
-                    <p>Fall 2022</p>
-                </div>
-            </div>
+    <?php
 
-            <div class="box">
-                <div class="heading">
-                    <h3>Female Characters</h3>
-                </div>
-                <img src="https://cdn.myanimelist.net/images/characters/8/491455.jpg" alt="">
-                <div class="description">
-                    <h4>Hitori Gotou / Bocchi</h4>
-                    <p>Week 5 - Fall</p>
-                    <br>
-                    <h4>Bocchi the Rock!</h4>
-                    <p>Fall 2022</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="heading">
-                    <h3>Couple-Ship</h3>
-                </div>
-                <img src="https://cdn.realsport101.com/images/ncavvykf/epicstream/a13c578fb7704b363631c3ce602cb0ba51e7196e-987x558.png?rect=0,1,987,556&w=700&h=394&dpr=2" alt="">
-                <div class="description">
-                    <h4>Yor x Loid</h4>
-                    <p>Week 5 - Fall</p>
-                    <br>
-                    <h4>Spy x Family Part 2</h4>
-                    <p>Fall 2022</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="heading">
-                    <h3>Top Anime</h3>
-                </div>
-                <img src="https://cdn.myanimelist.net/images/anime/1806/126216.jpg" alt="">
-                <div class="description">
-                    <h4>Chainsaw Man</h4>
-                    <p>Week 5 - Fall</p>
-                    <br>
-                    <h4>MAPPA</h4>
-                    <p>Fall 2022</p>
-                </div>
-            </div>
-        </div>
+    require_once '../includes/charts-leader.php';
+
+    ?>
+
 <?php
     require_once '../includes/footer.php';
 ?>

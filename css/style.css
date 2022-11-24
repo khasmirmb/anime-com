@@ -242,8 +242,16 @@ body{
 .vote1{
     background-color: #000000;
 }
+.vote1:hover{
+    background-color: rgb(170, 170, 170);
+    transition: 1s;
+}
 .vote{
     background-color: #1f1f1f;
+}
+.vote:hover{
+    background-color: rgb(170, 170, 170);
+    transition: 1s;
 }
 .vote-links li a{
     height: auto;
@@ -347,6 +355,10 @@ body{
     color: white;
     cursor: pointer;
 }
+.box:hover{
+    border: 2px solid aquamarine;
+    transition: 0.5s;
+}
 .box img{
     max-width: 100px;
     height: 150px;
@@ -372,4 +384,125 @@ body{
 }
 .box p{
     font-size: 13px;
+}
+.seasonal-title{
+    width: 100%;
+    padding: 25px;
+    background: whitesmoke;
+}
+.seasonal-title .seasonal-description{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.seasonal-description h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.seasonal-description h2{
+    font-size: 25px;
+    font-weight: bolder;
+    color: #343F4F;
+}
+.vote-list-content{
+    margin: auto;
+    width: 90%;
+    max-width: 100%;
+    display: inline-flexbox;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+}
+.vote-list-content a{
+    text-decoration: none;
+    color: white;
+}
+.vote-list-content a::visited{
+    text-decoration: none;
+}
+.vote-box{
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    background: black;
+    margin: 15px auto;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 10px;
+}
+.vote-box:hover{
+    border: 5px solid aquamarine;
+    color: black;
+    font-weight: bold;
+}
+.vote-box iconify-icon{
+    font-size: 150px;
+    text-align: center;
+    padding: 0;
+}
+.vote-text h1{
+    font-size: 30px;
+    padding: 0;
+    color: aquamarine;
+}
+footer{
+    margin-top: 30px;
+    background: black;
+    height: auto;
+    color: white;
+    padding: 40px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 15px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socials li{
+    margin: 0px 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.5 ease;
+}
+.socials a i{
+    font-size: 25px;
+}
+.socials a:hover i{
+    color: aquamarine;
+}
+.footer-bottom{
+    background: black;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 15px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    color: aquamarine;
+    font-weight: bold;
 }
