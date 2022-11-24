@@ -11,18 +11,17 @@ body{
 }
 .top-navigation{
     background-color: black;
-    height: 60  px;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
+    padding: 0 5% 0 0;
 }
 .logo{
     color: white;
     font-size: 30px;
     font-weight: bolder;
-    padding-right: 30px;
 }
 .logo span{
     color: aquamarine;
@@ -304,13 +303,12 @@ body{
     white-space: nowrap;
 }
 .profile-details{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     border-radius: 6px;
     height: 50px;
-    min-width: 170px;
+    min-width: 150px;
     color: azure;
-    margin-right: 25px;
     cursor: pointer;
     text-decoration: none;
     list-style: none;
@@ -320,24 +318,18 @@ body{
     font-size: 20px;
 }
 #logout-link{
-    position: relative;
     display: flex;
-    width: 20px;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
 }
 #logout-link a{
-    display: grid;
-}
-#logout-link i{
-    padding-left: 5px;
-}
-#logout-link span{
-    padding-bottom: 5px;
+    display: inline-flex;
 }
 #logout-link .links-name{
     color: #fff;
     font-size: 20px;
     white-space: nowrap;
-    display: inherit;
 }
 .charts-leader h2{
     color: #fff;
@@ -363,6 +355,7 @@ body{
     margin: 15px auto;
     color: white;
     cursor: pointer;
+    border-radius: 10px;
 }
 .box:hover{
     border: 2px solid aquamarine;
@@ -373,8 +366,9 @@ body{
     height: 150px;
     display: block;
     object-fit: cover;
-    padding: 5px;
     float: left;
+    border: 2px solid aquamarine;
+    margin: 10px;
 }
 .box .heading{
     width: 100%;
@@ -389,7 +383,7 @@ body{
 }
 .box .description{
     width: auto;
-    padding: 10px;
+    padding: 15px;
     display: inline-block;
 }
 .box p{
@@ -515,4 +509,49 @@ footer{
     opacity: .4;
     color: aquamarine;
     font-weight: bold;
+}
+.today-top{
+    margin-top: 25px;
+    width: 100%;
+    height: 220px;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.today-top:hover{
+    border: 1px solid aquamarine;
+}
+.top-box img{
+    max-width: 200px;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+    padding: 5px;
+    float: left;
+}
+.today-top .description{
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.today-top .description p{
+    padding-bottom: 20px;
+}
+.today-top .description h3{
+    color: aquamarine;
+    font-size: 25px;
+}
+.today-top .rank-today{
+    display: inline-block;
+    padding: 25px;
+}
+.today-top .rank-prev{
+    display: inline-block;
+    padding: 10px;
 }
