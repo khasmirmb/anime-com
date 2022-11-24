@@ -1,10 +1,9 @@
-@font-face { font-family: roboto-regular;
-    src: url('../font/Roboto-Regular.ttf'); }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: roboto-regular;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
 body{
@@ -54,22 +53,12 @@ body{
     border: 1px solid;
     border-width: auto;
 }
-.top-navigation input{
-    padding: 6px;
-    width: 50%;
-    border: none;
-    margin-left: 20px;
-    margin-bottom: 5px;
-    font-size: 17px;
-    border-radius: 5px;
-}
 .top-navigation button {
     cursor: pointer;
     border: 1;
     border-color: white;
     border-radius: 6px;
     font-weight: bold;
-    margin: 10px 10px;
     width: 100px;
     padding: 10px 20px;
     transition: 0.4s;
@@ -226,12 +215,9 @@ body{
     background-color: aquamarine;
 }
 .home-sidebar{
-    height: 70vh;
     width: 30%;
-    background: #1f1f1f;
     float: right;
     margin: 20px 30px 20px 20px;
-    border-radius: 10px;
 }
 .voting-links{
     width: auto;
@@ -256,6 +242,9 @@ body{
 .vote1{
     background-color: #000000;
 }
+.vote{
+    background-color: #1f1f1f;
+}
 .vote-links li a{
     height: auto;
     width: auto;
@@ -267,7 +256,6 @@ body{
 .vote-links li{
     position: relative;
     list-style: none;
-    height: 120px;
     width: 100%;
     text-align: center;
 }
@@ -319,9 +307,69 @@ body{
     display: flex;
     width: 20px;
 }
+#logout-link a{
+    display: grid;
+}
+#logout-link i{
+    padding-left: 5px;
+}
+#logout-link span{
+    padding-bottom: 5px;
+}
 #logout-link .links-name{
     color: #fff;
     font-size: 20px;
     white-space: nowrap;
     display: inherit;
+}
+.charts-leader h2{
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+}
+.charts-leader hr{
+    width: 155%;
+    margin-left: 2%;
+}
+.charts-leader{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    flex-wrap: wrap;
+    margin-left: 2%
+}
+.box{
+    max-width: 350px;
+    padding: 10px;
+    background: black;
+    margin: 15px auto;
+    color: white;
+    cursor: pointer;
+}
+.box img{
+    max-width: 100px;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+    padding: 5px;
+    float: left;
+}
+.box .heading{
+    width: 100%;
+    padding: 0 5px;
+    min-width: 300px;
+    float: right;
+}
+.heading h3{
+    text-transform: uppercase;
+    color: aquamarine;
+    padding: 15px 0px 15px 0px;
+}
+.box .description{
+    width: auto;
+    padding: 10px;
+}
+.box p{
+    font-size: 13px;
 }
