@@ -220,19 +220,28 @@ body{
     margin: 20px 30px 20px 20px;
 }
 .voting-links{
-    width: auto;
-    height: 50px;
+    width: 100%;
     border-radius: 5px;
-    background-color: aquamarine;
+    background-color: black;
     font-size: 25px;
     font-weight: bolder;
-    padding: 10px;
+    color: aquamarine;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 .voting-links span{
-    font-size: 25px;
+    font-size: 30px;
     display: inline-block;
     padding-left: 10px;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 .vote-links{
     display: grid;
@@ -240,14 +249,14 @@ body{
     align-items: center;
 }
 .vote1{
-    background-color: #000000;
+    background-color: #1f1f1f;
 }
 .vote1:hover{
     background-color: rgb(170, 170, 170);
     transition: 1s;
 }
 .vote{
-    background-color: #1f1f1f;
+    background-color: black;
 }
 .vote:hover{
     background-color: rgb(170, 170, 170);
@@ -348,7 +357,7 @@ body{
     margin-left: 2%
 }
 .box{
-    max-width: 350px;
+    max-width: 400px;
     padding: 10px;
     background: black;
     margin: 15px auto;
@@ -381,6 +390,7 @@ body{
 .box .description{
     width: auto;
     padding: 10px;
+    display: inline-block;
 }
 .box p{
     font-size: 13px;

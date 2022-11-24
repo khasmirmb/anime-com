@@ -1,6 +1,5 @@
 <div class="home-sidebar">
         <div class="voting-links">
-            <iconify-icon icon="fluent:vote-24-regular"></iconify-icon>
             <span class="vote-name">Voting Links</span>
         </div>
         <ul class="vote-links">
