@@ -4,7 +4,7 @@
                 <li><a href="../user/userpage.php">Home</a></li>
                 <li><a href="#">Trending</a></li>
                 <li><a href="../polls/main-polls.php">Polls</a></li>
-                <li><a href="../ranking/ranking.php">Ranking</a></li>
+                <li><a href="#">Ranking</a></li>
             </ul>
             <div class="profile-details">
                 <i class='bx bx-user-circle'></i>
