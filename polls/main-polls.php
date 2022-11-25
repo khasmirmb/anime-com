@@ -3,9 +3,16 @@
     //we start session since we need to use session values
     session_start();
     //creating an array for list of users can login to the system
-    require_once '../includes/auto-checker.php';
     require_once '../includes/header.php';
     require_once '../includes/topnav.php';
+
+    require_once '../classes/basic.database.php';
+
+    $pollsQuery = $db->query("SELECT id, title FROM polls");
+
+    while($row = $pollsQuery->fetchObject()){
+        $polls[] = $row;
+    }
 
 ?>
     <div class="seasonal-title">
@@ -17,66 +24,15 @@
     </div>
 
     <div class="vote-list-content">
-        <div class="vote-box">
-            <a href="../polls/season-anime.php">
-            <iconify-icon icon="icon-park-outline:ranking"></iconify-icon>
-            <div class="vote-text">
-                <h1>Seasonal Anime</h1>
-                <p>Fall 2022</p>
-            </div>
-            </a>
-        </div>
-
-        <div class="vote-box">
-            <a href="#">
-            <iconify-icon icon="mdi:face-male"></iconify-icon>
-            <div class="vote-text">
-                <h1>Male Characters</h1>
-                <p>Fall 2022</p>
-            </div>
-            </a>
-        </div>
-
-        <div class="vote-box">
-            <a href="#">
-            <iconify-icon icon="mdi:face-female"></iconify-icon>
-            <div class="vote-text">
-                <h1>Female Characters</h1>
-                <p>Fall 2022</p>
-            </div>
-            </a>
-        </div>
-
-        <div class="vote-box">
-            <a href="#">
-            <iconify-icon icon="mdi:face-female"></iconify-icon>
-            <div class="vote-text">
-                <h1>Couple-Ship</h1>
-                <p>Fall 2022</p>
-            </div>
-            </a>
-        </div>
-
-        <div class="vote-box">
-            <a href="#">
-            <iconify-icon icon="icon-park-outline:ranking"></iconify-icon>
-            <div class="vote-text">
-                <h1>Pre-Release Anime</h1>
-                <p>Fall 2022</p>
-            </div>
-            </a>
-        </div>
-
-        <div class="vote-box">
-            <a href="#">
-            <iconify-icon icon="material-symbols:music-note"></iconify-icon>
-            <div class="vote-text">
-                <h1>Anime Music</h1>
-                <p>Fall 2022</p>
-            </div>
-            </a>
-        </div>
-
+        <?php if(!empty($polls)): ?>
+            <ul>
+            <?php foreach($polls as $poll): ?>
+            <li><a href="season-anime.php?id=<?php echo $poll->id; ?>"><?php echo $poll->title; ?>></a></li>
+            <?php endforeach; ?>
+            </ul>
+            <?php else: ?>
+                <h1>There's No Ongoing Polls</h1>
+            <?php endif; ?>
     </div>
 
 <?php

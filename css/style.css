@@ -79,6 +79,7 @@ body{
     display: none;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, .6);
 }
 .modal{
     background: black;
@@ -438,52 +439,6 @@ body{
     font-size: 25px;
     font-weight: bolder;
     color: #343F4F;
-}
-.vote-list-content{
-    margin: auto;
-    width: 90%;
-    max-width: 100%;
-    display: inline-flexbox;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    text-align: center;
-}
-.vote-list-content a{
-    text-decoration: none;
-    color: white;
-}
-.vote-list-content a::visited{
-    text-decoration: none;
-}
-.vote-box{
-    width: 400px;
-    height: 300px;
-    padding: 30px;
-    background: black;
-    margin: 15px auto;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    align-items: center;
-    margin: 5px;
-    border-radius: 10px;
-}
-.vote-box:hover{
-    border: 5px solid aquamarine;
-    color: black;
-    font-weight: bold;
-}
-.vote-box iconify-icon{
-    font-size: 150px;
-    text-align: center;
-    padding: 0;
-}
-.vote-text h1{
-    font-size: 30px;
-    padding: 0;
-    color: aquamarine;
 }
 footer{
     margin-top: 30px;

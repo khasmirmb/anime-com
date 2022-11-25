@@ -3,15 +3,15 @@
     //we start session since we need to use session values
     session_start();
     //creating an array for list of users can login to the system
-    require_once '../includes/login-checker.php';
+    require_once '../includes/auto-checker.php';
     require_once '../includes/header.php';
-    require_once '../includes/homepage-topnav.php';
+    require_once '../includes/topnav.php';
 
 ?>
     <div class="seasonal-title">
         <div class="seasonal-description">
             <h1>Fall 2022</h1>
-            <h2>Seasonal Anime Polls</h2>
+            <h2>Seasonal Anime Ranking</h2>
             <h3>Anime Trending</h3>
         </div>
     </div>

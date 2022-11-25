@@ -1,6 +1,6 @@
 <div class="home-sidebar">
         <div class="voting-links">
-            <span class="vote-name">Vote Now!</span>
+            <span class="vote-name">Rate Now!</span>
         </div>
         <ul class="vote-links">
         <li class="vote1">

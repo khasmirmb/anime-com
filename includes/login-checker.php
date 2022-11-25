@@ -28,11 +28,11 @@
                 </form>
             </div>
         </div>
-    </div>
+</div>
 
 <script type="text/javascript">
     $(function(){
-            $('.polls-list, .today-top, .box, #login-show, .vote-box').click(function(){
+            $('.polls-list, .today-top, .box, #login-show').click(function(){
                 $('#login-modal').fadeIn().css('display', 'flex')
             });
 

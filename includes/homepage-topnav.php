@@ -3,8 +3,8 @@
             <ul>
                 <li><a href="../homepage/homepage.php" class="">Home</a></li>
                 <li><a href="#" class="">Trending</a></li>
-                <li><a href="../homepage/homepage-polls.php" class="">Polls</a></li>
-                <li><a href="#" class="">Awards</a></li>
+                <li><a href="#" class="">Polls</a></li>
+                <li><a href="#" class="">Ranking</a></li>
             </ul>
             <button type="button" id="login-show">Login</button>
             <button type="button" id="#">SignUp</button>
