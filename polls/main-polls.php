@@ -18,7 +18,7 @@
 
     <div class="vote-list-content">
         <div class="vote-box">
-            <a href="#">
+            <a href="../polls/season-anime.php">
             <iconify-icon icon="icon-park-outline:ranking"></iconify-icon>
             <div class="vote-text">
                 <h1>Seasonal Anime</h1>
