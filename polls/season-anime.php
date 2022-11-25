@@ -13,7 +13,7 @@
 <div class="seasonal-title">
         <div class="seasonal-description">
             <h1>Fall 2022</h1>
-            <h2>Top Seasonal Anime Polls</h2>
+            <h2>Seasonal Anime Polls</h2>
             <h3>Anime Trending</h3>
         </div>
 </div>
