@@ -1,4 +1,5 @@
-<section class="section">
+<div class="section">
+    <div class="section-selector">
             <div class="slider">
                 <div class="slide">
                     <input type="radio" name="radio-btn" id="radio1">
@@ -7,19 +8,19 @@
                     <input type="radio" name="radio-btn" id="radio4">
 
                     <div class="st first">
-                            <img src="../images/img1.jpg" alt="img" width="850" height="400">
+                            <img src="../images/img1.jpg" alt="img" width="1366" height="768">
                     </div>
 
                     <div class="st">
-                        <img src="../images/img2.jpg" alt="img" width="850" height="400">
+                        <img src="../images/img2.jpg" alt="img" width="1366" height="768">
                     </div>
 
                     <div class="st">
-                        <img src="../images/img3.jpg" alt="img" width="850" height="400">
+                        <img src="../images/img3.jpg" alt="img" width="1366" height="768">
                     </div>
 
                     <div class="st">
-                        <img src="../images/img4.jpg" alt="img" width="850" height="400">
+                        <img src="../images/img4.jpg" alt="img" width="1366" height="768">
                     </div>
 
                     <div class="nav-auto">
@@ -36,8 +37,8 @@
                     <label for="radio4" class="m-btn"></label>
                 </div>
             </div>
-</section>
-
+        </div>
+</div>
     <script type="text/javascript">
             var counter=1;
             setInterval(function(){

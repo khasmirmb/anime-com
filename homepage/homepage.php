@@ -34,14 +34,11 @@
 
     require_once '../includes/slider.php';
     require_once '../includes/home-sidebar.php';
+    require_once '../includes/charts-leader.php';
+
 
     ?>
 
-    <?php
-
-        require_once '../includes/charts-leader.php';
-
-    ?>
 
 <?php
     require_once '../includes/footer.php';

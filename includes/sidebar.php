@@ -46,22 +46,4 @@
             </a>
         </li>
         </ul>
-
-        <div class="today-top">
-                <div class="top-box">
-                    <img src="https://cdn.myanimelist.net/images/anime/1806/126216.jpg" alt="">
-                    <div class="description">
-                        <h3>Chainsaw Man</h3>
-                        <p>Top Anime of the Week</p>
-                        <div class="rank-today">
-                        <h4>Today</h4>
-                        <p>Top 1</p>
-                        </div>
-                        <div class="rank-prev">
-                        <h4>Previous</h4>
-                        <p>Top 2</p>
-                        </div>
-                    </div>
-                </div>
-        </div>
 </div>
