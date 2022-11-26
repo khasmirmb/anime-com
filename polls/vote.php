@@ -4,14 +4,13 @@
 
     require_once '../classes/basic.database.php';
 
-    if(isset($_POST['poll'], $_POST['choice'])){
+    if(isset($_POST['poll'], $_POST['choice'])) {
 
         $poll = $_POST['poll'];
         $choice = $_POST['choice'];
 
         $voteQuery = $db->prepare("INSERT INTO polls_answers (user, poll, choice)
-        SELECT :user, :poll , :choice
-        FROM polls
+        SELECT :user, :poll , :choice FROM polls
         WHERE EXISTS (
             SELECT id
             FROM polls
@@ -31,11 +30,11 @@
         $voteQuery->execute([
             'user' => $_SESSION['user_id'],
             'poll' => $poll,
-            'choice' => $choice
+            'choice' => $_POST['choice']
         ]);
 
         header('location: season-polls.php?poll=' . $poll);
     }
 
-    header('location: main-polls.php?poll=');
+    header('location: main-polls.php');
 ?>

@@ -32,6 +32,11 @@
     while($row = $choicesQuery->fetchObject()){
         $choices[] = $row;
     }
+
+    if(isset($_POST['poll'])){
+        $choice = $_POST['choice'];
+    }
+
 ?>
 
 <div class="seasonal-title">

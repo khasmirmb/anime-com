@@ -33,25 +33,24 @@ USE `anime`;
 CREATE TABLE `polls` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `starts` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `ends` datetime NOT NULL
+  `season` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `polls`
 --
 
-INSERT INTO `polls` (`id`, `title`, `starts`, `ends`) VALUES
-(1, 'Seasonal Anime', '2022-11-25 22:56:24', '2022-12-01 15:48:46'),
-(2, 'Male Character', '2022-11-26 00:03:26', '2022-12-01 16:26:18');
+INSERT INTO `polls` (`id`, `title`, `season`) VALUES
+(1, 'Seasonal Anime', 'Fall 2022'),
+(2, 'Male Character', 'Fall 2022');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `polls_answer`
+-- Table structure for table `polls_answers`
 --
 
-CREATE TABLE `polls_answer` (
+CREATE TABLE `polls_answers` (
   `id` int(11) NOT NULL,
   `user` int(11) NOT NULL,
   `poll` int(11) NOT NULL,
@@ -77,7 +76,12 @@ CREATE TABLE `polls_choices` (
 
 INSERT INTO `polls_choices` (`id`, `anime_name`, `description`, `poll`) VALUES
 (1, 'Chainsaw Man', '', 1),
-(2, 'Spy x Family', '', 1);
+(2, 'Spy x Family', '', 1),
+(3, 'Blue Lock', '', 1),
+(4, 'Kagenou, Cid', 'The Eminence in Shadow', 2),
+(5, 'Kageyama, Shigeo / Mob', 'Mob Psycho 100 III', 2),
+(6, 'Forger, Loid', 'SPY x FAMILY Part II', 2),
+(7, 'Denji', 'Chainsaw Man', 2);
 
 -- --------------------------------------------------------
 
@@ -115,6 +119,12 @@ ALTER TABLE `polls`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `polls_answers`
+--
+ALTER TABLE `polls_answers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `polls_choices`
 --
 ALTER TABLE `polls_choices`
@@ -137,10 +147,16 @@ ALTER TABLE `polls`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `polls_answers`
+--
+ALTER TABLE `polls_answers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `polls_choices`
 --
 ALTER TABLE `polls_choices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
