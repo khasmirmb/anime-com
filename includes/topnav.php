@@ -9,11 +9,11 @@
             <div class="profile-details">
                 <i class='bx bx-user-circle'></i>
                 <span class="admin-name"><?php echo $_SESSION['fullname']; ?></span>
-                <li id="logout-link">
+                <span id="logout-link">
                 <a href="../homepage/logout.php">
                 <i class='bx bx-log-out'></i>
                 <span class="links-name">Logout</span>
                 </a>
-                </li>
+                </span>
             </div>
 </div>

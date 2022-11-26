@@ -7,12 +7,11 @@
     if(isset($_POST['username']) && isset($_POST['password'])){
         //Sanitizing the inputs of the users. Mandatory to prevent injections!
         $users = new Accounts;
-        $users->id = htmlentities($_POST['id']);
         $users->username = htmlentities($_POST['username']);
         $users->password = htmlentities($_POST['password']);
         $res = $users->validate();
         if($res){
-            $_SESSION['user_id'] = $res['id'];
+            $_SESSION['user'] = $res['id'];
             $_SESSION['logged-in'] = $res['username'];
             $_SESSION['fullname'] = $res['firstname'].' '.$res['lastname'];
             $_SESSION['user_type'] = $res['type'];

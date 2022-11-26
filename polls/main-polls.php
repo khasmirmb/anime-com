@@ -8,7 +8,7 @@
 
     require_once '../classes/basic.database.php';
 
-    $pollsQuery = $db->query("SELECT id, title FROM polls");
+    $pollsQuery = $db->query("SELECT id, title, season FROM polls");
 
     while($row = $pollsQuery->fetchObject()){
         $polls[] = $row;
@@ -27,7 +27,7 @@
         <?php if(!empty($polls)): ?>
             <ul>
             <?php foreach($polls as $poll): ?>
-            <li><a href="season-anime.php?id=<?php echo $poll->id; ?>"><?php echo $poll->title; ?>></a></li>
+            <li><h2><a href="season-polls.php?poll=<?php echo $poll->id; ?>"><?php echo $poll->title; ?></h2><h2><?php echo $poll->season; ?></h2></a></li>
             <?php endforeach; ?>
             </ul>
             <?php else: ?>
