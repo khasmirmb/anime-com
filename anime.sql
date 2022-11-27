@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2022 at 10:31 PM
+-- Generation Time: Nov 27, 2022 at 10:47 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -174,21 +174,21 @@ INSERT INTO `polls_choices` (`id`, `anime_name`, `description`, `poll`, `image`)
 (73, 'Vinland Saga S2', 'MAPPA', 5, 'https://cdn.myanimelist.net/images/anime/1170/124312.jpg'),
 (74, 'Dr. Stone', 'TMS Entertainment', 5, 'https://cdn.myanimelist.net/images/anime/1071/124921.jpg'),
 (75, 'Bocchi The Rock!', 'CloverWorks', 5, 'https://cdn.myanimelist.net/images/anime/1448/127956.jpg'),
-(76, 'Prism', 'AmPm, Miyuna', 6, ''),
-(77, 'DADDY! DADDY! DO!', 'Masayuki Suzuki, Airi Suzuki', 6, ''),
-(78, 'Chiisana Hibi', 'flumpool', 6, ''),
-(79, 'New Genesis', 'Ado', 6, ''),
-(80, 'Shinkai', 'eve', 6, ''),
-(81, 'A Cruel Angel\'s Thesis', 'Shiro Sagisu, Yoko Takahashi', 6, ''),
-(82, 'Hero\'s Come back!', 'nobodyknows+', 6, ''),
-(83, 'Inferno', 'Mrs. Green Apple', 6, ''),
-(84, 'Comedy', 'Gen Hoshino ', 6, ''),
-(85, 'Homura', 'LiSA', 6, ''),
-(86, 'Hero too', 'Kyoko Jiro / Chrissy Costanza', 6, ''),
-(87, 'Blue Bird', 'Ikimonogakari', 6, ''),
-(88, 'Again', 'Yui', 6, ''),
-(89, 'Ashiato -Footprints -', 'the peggies', 6, ''),
-(90, 'Sugar Song To Bitter Step', 'Unison Square Garden', 6, '');
+(76, 'Prism', 'AmPm, Miyuna', 6, 'https://cdn.myanimelist.net/images/anime/1972/111635.jpg'),
+(77, 'DADDY! DADDY! DO!', 'Masayuki Suzuki, Airi Suzuki', 6, 'https://cdn.myanimelist.net/images/anime/1295/106551.jpg'),
+(78, 'Chiisana Hibi', 'flumpool', 6, 'https://cdn.myanimelist.net/images/anime/1048/128385.jpg'),
+(79, 'New Genesis', 'Ado', 6, 'https://cdn.myanimelist.net/images/anime/1668/125323.jpg'),
+(80, 'Shinkai', 'eve', 6, 'https://cdn.myanimelist.net/images/anime/1714/108892.jpg'),
+(81, 'A Cruel Angel\'s Thesis', 'Shiro Sagisu, Yoko Takahashi', 6, 'https://cdn.myanimelist.net/images/anime/1314/108941.jpg'),
+(82, 'Hero\'s Come back!', 'nobodyknows+', 6, 'https://cdn.myanimelist.net/images/anime/1565/111305.jpg'),
+(83, 'Inferno', 'Mrs. Green Apple', 6, 'https://cdn.myanimelist.net/images/anime/1664/103275.jpg'),
+(84, 'Comedy', 'Gen Hoshino ', 6, 'https://cdn.myanimelist.net/images/anime/1441/122795.jpg'),
+(85, 'Homura', 'LiSA', 6, 'https://cdn.myanimelist.net/images/anime/1065/118763.jpg'),
+(86, 'Hero too', 'Kyoko Jiro / Chrissy Costanza', 6, 'https://cdn.myanimelist.net/images/anime/1412/107914.jpg'),
+(87, 'Blue Bird', 'Ikimonogakari', 6, 'https://cdn.myanimelist.net/images/anime/13/41403.jpg'),
+(88, 'Again', 'Yui', 6, 'https://cdn.myanimelist.net/images/anime/1208/94745.jpg'),
+(89, 'Ashiato -Footprints -', 'the peggies', 6, 'https://cdn.myanimelist.net/images/anime/1911/113611.jpg'),
+(90, 'Sugar Song To Bitter Step', 'Unison Square Garden', 6, 'https://cdn.myanimelist.net/images/anime/12/73559.jpg');
 
 -- --------------------------------------------------------
 
