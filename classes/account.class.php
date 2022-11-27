@@ -30,6 +30,33 @@ class Accounts{
         return $data;
     }
 
+    function add(){
+        $sql = "INSERT INTO user (firstname, lastname, type, username, password) VALUES
+        (:firstname, :lastname, :type, :username, :password);";
+
+        $query=$this->db->connect()->prepare($sql);
+        $query->bindParam(':firstname', $this->firstname);
+        $query->bindParam(':lastname', $this->lastname);
+        $query->bindParam(':type', $this->type);
+        $query->bindParam(':username', $this->username);
+        $query->bindParam(':password', $this->password);
+
+        if($query->execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    function show(){
+        $sql = "SELECT * FROM user;";
+        $query=$this->db->connect()->prepare($sql);
+        if($query->execute()){
+            $data = $query->fetchAll();
+        }
+        return $data;
+    }
+
 
 }
 

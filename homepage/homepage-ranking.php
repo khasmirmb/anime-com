@@ -4,8 +4,8 @@
     session_start();
     //creating an array for list of users can login to the system
     require_once '../includes/header.php';
-    require_once '../includes/topnav.php';
-    require_once '../includes/auto-checker.php';
+    require_once '../includes/homepage-topnav.php';
+    require_once '../includes/login-checker.php';
     require_once '../classes/basic.database.php';
 
     $pollsQuery = $db->query("SELECT id, title, season, image FROM polls");
@@ -28,7 +28,7 @@
             <ul>
             <?php foreach($polls as $poll): ?>
             <li>
-                <a href="season-ranking.php?poll=<?php echo $poll->id; ?>">
+                <a href="#">
                 <img src="<?php echo $poll->image; ?>" alt="" width="225px" height="350px">
                 <h2><?php echo $poll->title; ?></h2><h3><?php echo $poll->season; ?></h3></a></li>
             <?php endforeach; ?>

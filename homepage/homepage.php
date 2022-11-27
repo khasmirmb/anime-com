@@ -1,5 +1,6 @@
 <?php
     require_once '../classes/account.class.php';
+    require_once '../tools/functions.php';
     //we start session since we need to use session values
     session_start();
     //creating an array for list of users can login to the system
@@ -23,6 +24,23 @@
         }
         //set the error message if account is invalid
         $error = 'Invalid username/password. Try again.';
+    }
+
+    if(isset($_POST['save'])){
+
+        $account = new Accounts();
+        //sanitize user inputs
+        $account->firstname = htmlentities($_POST['firstname']);
+        $account->lastname = htmlentities($_POST['lastname']);
+        $account->type = htmlentities($_POST['type']);
+        $account->username = htmlentities($_POST['username']);
+        $account->password = htmlentities($_POST['password']);
+        if(validate_signup($_POST)){
+            if($account->add()){
+                //redirect user to program page after saving
+                header('location: homepage.php');
+            }
+        }
     }
 
     require_once '../includes/header.php';
