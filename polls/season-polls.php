@@ -5,7 +5,6 @@
     require_once '../includes/auto-checker.php';
     require_once '../includes/header.php';
     require_once '../includes/topnav.php';
-
     require_once '../classes/basic.database.php';
 
     if(!isset($_GET['poll'])){
@@ -26,15 +25,11 @@
     polls JOIN polls_choices ON polls.id = polls_choices.poll WHERE polls.id = :poll");
 
     $choicesQuery->execute([
-        'poll' => $id
+        'poll' => $id,
     ]);
 
     while($row = $choicesQuery->fetchObject()){
         $choices[] = $row;
-    }
-
-    if(isset($_POST['poll'])){
-        $choice = $_POST['choice'];
     }
 
 ?>
@@ -60,18 +55,18 @@
                 <h4><?php echo $poll->season ;?></h4>
             </div>
             <?php if(!empty($choices)): ?>
-            <form action="vote.php" method="post">
+            <form action="vote.php" method="POST">
                 <div class="poll-options">
 
                     <?php foreach($choices as $index => $choice):?>
                         <div class="poll-option">
-                            <input type="radio" name="choice" value="<?php $choice->choice_id; ?>"
+                            <input type="radio" name="choice" value="<?php echo $choice->choice_id; ?>"
                             id="c<?php echo $index; ?>">
                             <label for="c<?php echo $index; ?>"><?php echo $choice->anime_name; ?></label>
                         </div>
                     <?php endforeach;?>
 
-                    <input type="submit" value="Submit Vote">
+                    <input type="submit" value="Submit Vote" name="save_radio">
                     <input type="hidden" name="poll" value="<?php echo $id; ?>">
             </form>
             <?php else: ?>

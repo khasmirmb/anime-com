@@ -18,7 +18,8 @@
         AND EXISTS (
             SELECT id
             FROM polls_choices
-            WHERE id = :choice)
+            WHERE id = :choice
+            AND poll = :poll)
         AND NOT EXISTS (
             SELECT id
             FROM polls_answers
@@ -28,9 +29,9 @@
         ");
 
         $voteQuery->execute([
-            'user' => $_SESSION['user_id'],
+            'user' => $_SESSION['user'],
             'poll' => $poll,
-            'choice' => $_POST['choice']
+            'choice' => $choice
         ]);
 
         header('location: season-polls.php?poll=' . $poll);
