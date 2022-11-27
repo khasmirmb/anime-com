@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-
+    require_once '../includes/auto-checker.php';
     require_once '../classes/basic.database.php';
 
     if(isset($_POST['poll'], $_POST['choice'])) {

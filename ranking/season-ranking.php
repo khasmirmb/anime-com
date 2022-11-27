@@ -53,7 +53,7 @@
 
         }else{
 
-            $choicesQuery = $db->prepare("SELECT polls.id, polls_choices.id AS choice_id, polls_choices.anime_name, polls_choices.description, polls_choices.image FROM
+            $choicesQuery = $db->prepare("SELECT polls.id, polls_choices.id AS choice_id, polls_choices.anime_name, polls_choices.description FROM
             polls JOIN polls_choices ON polls.id = polls_choices.poll WHERE polls.id = :poll");
 
             $choicesQuery->execute([
@@ -65,6 +65,7 @@
             }
         }
     }
+
 ?>
 
 <div class="seasonal-title">
@@ -75,51 +76,25 @@
         </div>
 </div>
 
-<div class="poll-wraper">
+<div class="ranking-wraper">
 
-    <?php if (!$poll): ?>
-        <div class="error-poll">
-            <h2>That poll doesn't exist!</h2>
-        </div>
-    <?php else: ?>
-        <div class="polls">
-            <div class="poll-title">
+        <div class="ranking">
+            <div class="ranking-title">
                 <h1><?php echo $poll->title ;?></h1>
                 <h4><?php echo $poll->season ;?></h4>
             </div>
-
-            <?php if($completed): ?>
-                <div class="completed-poll">
-                    <h1>You have already completed this poll, Thank you for voting!</h1>
-                </div>
-            <?php else:?>
-
-            <?php if(!empty($choices)): ?>
-            <form action="vote.php" method="POST">
-                <div class="poll-options">
-
-                    <?php foreach($choices as $index => $choice):?>
-                        <div class="poll-option">
-                            <input type="radio" name="choice" value="<?php echo $choice->choice_id; ?>"
-                            id="c<?php echo $index; ?>">
-                            <label for="c<?php echo $index; ?>"><h2><?php echo $choice->anime_name; ?>
-                        </h2></label>
-                            <h3><?php echo $choice->description; ?></h3>
-                            <img src="<?php echo $choice->image; ?>" alt="">
-                        </div>
-                    <?php endforeach;?>
-
-                    <input type="submit" value="Submit Vote" name="save_radio">
-                    <input type="hidden" name="poll" value="<?php echo $id; ?>">
-            </form>
-            <?php else: ?>
-                <div class="choices-error">
-                    <h1>There are no choices right now</h1>
-                </div>
-                    <?php endif; ?>
-            <?php endif; ?>
+            <div class="ranking-list">
+                <ul>
+                    <?php foreach($answers as $answer){ ?>
+                        <li>
+                        <img src="<?php echo $answer->image ?>" alt="">
+                        <h1><?php echo $answer->anime_name; ?></h1>
+                        <h><?php echo number_format($answer->percentage, 2)?>%</h></li>
+                    <?php }?>
+                </ul>
+            </div>
         </div>
-    <?php endif;?>
+
 </div>
 
 

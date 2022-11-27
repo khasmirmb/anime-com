@@ -509,7 +509,110 @@ footer{
     color: aquamarine;
     font-weight: bold;
 }
-.vote-list-content a{
-    text-decoration: none;
-    color: black;
+.vote-list-content{
+   height: auto;
+   margin: auto;
+   width: auto;
 }
+.vote-list-content ul{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+.vote-list-content ul li{
+    width: 90%;
+    height: auto;
+    background: rgb(22, 22, 22);
+    padding: 50px;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+.vote-list-content ul li img{
+    object-fit: cover;
+    border: 2px solid aquamarine;
+    padding: 5px;
+}
+.vote-list-content ul li a{
+    text-decoration: none;
+    color: white;
+}
+.vote-list-content ul li h2{
+    text-decoration: none;
+    color: aquamarine;
+}
+
+.ranking-list-content{
+    height: auto;
+    margin: auto;
+    width: auto;
+ }
+ .ranking-list-content ul{
+     text-decoration: none;
+     list-style: none;
+     display: inline-block;
+     width: 100%;
+ }
+ .ranking-list-content ul li{
+     width: 90%;
+     height: auto;
+     background: rgb(31, 34, 56);
+     padding: 50px;
+     margin: auto;
+     margin-top: 20px;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center;
+     border-radius: 10px;
+ }
+ .ranking-list-content ul li img{
+     object-fit: cover;
+     border: 2px solid aquamarine;
+     padding: 5px;
+ }
+ .ranking-list-content ul li a{
+     text-decoration: none;
+     color: white;
+ }
+ .ranking-list-content ul li h2{
+     text-decoration: none;
+     color: aquamarine;
+ }
+ .poll-wraper{
+     width: auto;
+     height: auto;
+     margin: auto;
+ }
+ .poll-wraper .polls{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+ }
+ .polls .poll-title{
+    margin: 10px;
+ }
+ .polls .poll-title h1{
+    color: rgb(0, 0, 0);
+ }
+ .polls .poll-title h4{
+    color: rgb(8, 18, 63);
+ }
+ .completed-poll{
+    margin: auto;
+    width: 80%;
+    height: 30vh;
+    background: #000000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+ }
+ .completed-poll h1{
+    color: white;
+ }
+

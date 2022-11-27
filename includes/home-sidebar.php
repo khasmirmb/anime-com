@@ -34,7 +34,7 @@
         <li class="vote1">
             <a href="#" class="polls-list">
                 <iconify-icon icon="icon-park-outline:ranking"></iconify-icon>
-                <span class="links-name">Pre-Release Anime Polls</span>
+                <span class="links-name">Anime Of The Year Polls Polls</span>
                 <p>Result Every Sunday</p>
             </a>
         </li>
