@@ -53,12 +53,12 @@ class Accounts{
         $sql = "UPDATE user SET firstname=:firstname, lastname=:lastname, type=:type, username=:username, password=:password WHERE id = :id;";
 
         $query=$this->db->connect()->prepare($sql);
-        $query->bindParam(':id', $this->id);
         $query->bindParam(':firstname', $this->firstname);
         $query->bindParam(':lastname', $this->lastname);
         $query->bindParam(':type', $this->type);
         $query->bindParam(':username', $this->username);
         $query->bindParam(':password', $this->password);
+        $query->bindParam(':id', $this->id);
 
         if($query->execute()){
             return true;
@@ -98,7 +98,6 @@ class Accounts{
         }
         return $data;
     }
-
 
 }
 

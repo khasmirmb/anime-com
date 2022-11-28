@@ -91,6 +91,7 @@
             <?php if($completed): ?>
                 <div class="completed-poll">
                     <h1>You have already completed this poll, Thank you for voting!</h1>
+                    <a href="main-polls.php">Click Here To Go Back</a>
                 </div>
             <?php else:?>
 

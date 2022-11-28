@@ -16,19 +16,19 @@
             </a>
         </li>
         <li>
-            <a href="#" class="" title="Screening">
+            <a href="../admin-polls/polls.php" class="" title="Polls">
                 <i class='bx bx-poll'></i>
                 <span class="links-name">Polls</span>
             </a>
         </li>
         <li>
-        <a href="#" class="" title="Polls Answer">
+        <a href="../admin-pollsanswer/polls.php" class="" title="Polls Answer">
                 <i class='bx bx-task' ></i>
                 <span class="links-name">Polls Answers</span>
             </a>
         </li>
         <li>
-        <a href="#" class="" title="Polls Choices">
+        <a href="../admin-pollschoices/polls.php" class="" title="Polls Choices">
                 <i class='bx bx-list-ol' ></i>
                 <span class="links-name">Polls Choices</span>
             </a>

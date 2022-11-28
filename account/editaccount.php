@@ -59,7 +59,7 @@
                 <form class="add-form" action="editaccount.php" method="post">
                     <input type="text" hidden name="account-id" value="<?php echo $account->id ; ?>">
                     <label for="firstname">First Name</label>
-                        <input type="text" id="firstname" name="firstname" required placeholder="Enter Firstname" value="<?php if(isset($_POST['firstname'])) { echo $_POST['firstname']; } ?>">
+                        <input type="text" id="firstname" name="firstname" required placeholder="Enter Firstname" value="<?php if(isset($_POST['firstname'])) { echo $_POST['firstname'];} else { echo $account->firstname; } ?>">
                         <?php
                             if(isset($_POST['save']) && !validate_signup_first_name($_POST)){
                         ?>
@@ -68,7 +68,7 @@
                             }
                         ?>
                         <label for="lastname">Last Name</label>
-                        <input type="text" id="lastname" name="lastname" required placeholder="Enter Lastname" value="<?php if(isset($_POST['lastname'])) { echo $_POST['lastname']; } ?>">
+                        <input type="text" id="lastname" name="lastname" required placeholder="Enter Lastname" value="<?php if(isset($_POST['lastname'])) { echo $_POST['lastname'];} else { echo $account->lastname; } ?>">
                         <?php
                             if(isset($_POST['save']) && !validate_signup_last_name($_POST)){
                         ?>
@@ -77,7 +77,7 @@
                             }
                         ?>
                         <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required placeholder="Enter Username" value="<?php if(isset($_POST['username'])) { echo $_POST['username']; } ?>">
+                        <input type="text" id="username" name="username" required placeholder="Enter Username" value="<?php if(isset($_POST['username'])) { echo $_POST['username'];} else { echo $account->username; } ?>">
                         <?php
                             if(isset($_POST['save']) && !validate_signup_username($_POST) && !validate_username_duplicate($_POST)){
                         ?>
@@ -86,7 +86,7 @@
                             }
                         ?>
                         <label for="password">Password</label>
-                        <input type="text" id="password" name="password" required placeholder="Enter Password" value="<?php if(isset($_POST['password'])) { echo $_POST['password']; } ?>">
+                        <input type="text" id="password" name="password" required placeholder="Enter Password" value="<?php if(isset($_POST['password'])) { echo $_POST['password'];} else { echo $account->password; } ?>">
                         <?php
                             if(isset($_POST['save']) && !validate_signup_password($_POST)){
                         ?>
