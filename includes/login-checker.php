@@ -61,6 +61,13 @@
                     <input type="text" name="username" class="form-control" placeholder="Enter Username" required>
                     <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
                     <button type="submit" value="create account" name="save" id="save">Create Account</button>
+                    <?php
+                        //Display the error message if there is any.
+                        if(isset($user_taken)){
+                            echo '<div><p class="error">'.$user_taken.'</p></div>';
+                        }
+
+                    ?>
                 </form>
             </div>
         </div>

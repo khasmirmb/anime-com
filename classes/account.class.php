@@ -48,11 +48,53 @@ class Accounts{
             return false;
         }
     }
+
+    function edit(){
+        $sql = "UPDATE user SET firstname=:firstname, lastname=:lastname, type=:type, username=:username, password=:password WHERE id = :id;";
+
+        $query=$this->db->connect()->prepare($sql);
+        $query->bindParam(':id', $this->id);
+        $query->bindParam(':firstname', $this->firstname);
+        $query->bindParam(':lastname', $this->lastname);
+        $query->bindParam(':type', $this->type);
+        $query->bindParam(':username', $this->username);
+        $query->bindParam(':password', $this->password);
+
+        if($query->execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     function show(){
         $sql = "SELECT * FROM user;";
         $query=$this->db->connect()->prepare($sql);
         if($query->execute()){
             $data = $query->fetchAll();
+        }
+        return $data;
+    }
+
+    function delete($record_id){
+        $sql = "DELETE FROM user WHERE id = :id;";
+        $query=$this->db->connect()->prepare($sql);
+        $query->bindParam(':id', $record_id);
+        if($query->execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function fetch($record_id){
+        $sql = "SELECT * FROM user WHERE id = :id;";
+        $query=$this->db->connect()->prepare($sql);
+        $query->bindParam(':id', $record_id);
+        if($query->execute()){
+            $data = $query->fetch();
         }
         return $data;
     }

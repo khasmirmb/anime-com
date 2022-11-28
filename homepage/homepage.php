@@ -17,7 +17,7 @@
             $_SESSION['fullname'] = $res['firstname'].' '.$res['lastname'];
             $_SESSION['user_type'] = $res['type'];
             if($res['type'] == 'admin'){
-                header('location: ../user/userpage.php');
+                header('location: ../admin/dashboard.php');
             }else{
                 header('location: ../user/userpage.php');
             }
@@ -38,8 +38,10 @@
         if(validate_signup($_POST)){
             if($account->add()){
                 //redirect user to program page after saving
-                header('location: homepage.php');
+                header('location: hompage.php');
             }
+        }else{
+            $user_taken = 'Username Already Taken.';
         }
     }
 
