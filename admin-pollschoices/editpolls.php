@@ -24,7 +24,7 @@
         $choices->description = htmlentities($_POST['description']);
         $choices->image = htmlentities($_POST['image']);
         $choices->poll = htmlentities($_POST['poll']);
-        if($choices->add()){
+        if($choices->edit()){
             //redirect user to program page after saving
              header('location: polls.php');
         }

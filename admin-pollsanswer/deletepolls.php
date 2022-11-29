@@ -1,6 +1,6 @@
 <?php
 
-    require_once '../classes/polls.class.php';
+    require_once '../classes/polls.answers.class.php';
 
     //resume session here to fetch session values
     session_start();

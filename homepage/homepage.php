@@ -38,7 +38,7 @@
         if(validate_signup($_POST)){
             if($account->add()){
                 //redirect user to program page after saving
-                header('location: hompage.php');
+                header('location: ../homepage/homepage.php');
             }
         }else{
             $user_taken = 'Username Already Taken.';
